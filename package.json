@@ -1,0 +1,29 @@
+{
+  "name": "postgres-graph-sandbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "author": "",
+  "license": "UNLICENSED",
+  "scripts": {
+    "init": "node scripts/init",
+    "destroy": "node scripts/destroy",
+    "search": "node scripts/search"
+  },
+  "dependencies": {
+    "chance": "^1.1.11",
+    "commander": "^11.0.0",
+    "csv-parse": "^5.5.0",
+    "delay": "^4.2.0",
+    "dockerode": "^3.3.5",
+    "execa": "^4.0.2",
+    "fs-extra": "^11.1.1",
+    "graphviz": "^0.0.9",
+    "knex": "^2.5.1",
+    "lodash": "^4.17.21",
+    "p-retry": "^4.2.0",
+    "pg": "^8.11.3",
+    "uuid": "^9.0.1"
+  }
+}

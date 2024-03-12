@@ -1,0 +1,8 @@
+FROM postgres:16.2-alpine3.19
+RUN apk add build-base clang15-dev llvm15
+COPY pgfaceting-0.1.0 /tmp/pgfaceting
+COPY pg_roaringbitmap-0.5.4 /tmp/roaringbitmap
+WORKDIR /tmp/roaringbitmap
+RUN make install
+WORKDIR /tmp/pgfaceting
+RUN make install

@@ -1,0 +1,28 @@
+#!/usr/bin/env node
+
+const { program } = require('commander');
+const path = require('path');
+const pkg = require('./package.json');
+
+program
+    .name('sandbox')
+    .version(pkg.version)
+    .command('db:init', 'Initialize the database', {
+      executableFile: path.resolve(__dirname, 'scripts/init'),
+    })
+    .command('db:destroy', 'Destroy database', {
+      executableFile: path.resolve(__dirname, 'scripts/destroy'),
+    })
+    .command('device:details', 'Fetch details for a device', {
+      executableFile: path.resolve(__dirname, 'scripts/device-details'),
+    })
+    .command('visualize', 'Create graph visualization', {
+      executableFile: path.resolve(__dirname, 'scripts/visualize'),
+    })
+    .command('source:visualize', 'Create graph visualization of the source data', {
+      executableFile: path.resolve(__dirname, 'scripts/source-visualize'),
+    })
+    .command('reality:visualize', 'Create graph visualization of the reality of what is actually stored in the database', {
+      executableFile: path.resolve(__dirname, 'scripts/reality-visualize'),
+    })
+    .parse(process.argv);

@@ -1,0 +1,10 @@
+[
+  {
+    "id": "6ff9c0de-1ece-42bc-9be3-55aefaad7569",
+    "category_id": "1a2f4493-5115-4cac-84a2-70da5f609e7b",
+    "tags": ["Foo", "Bar"],
+    "mimetype": "application/pdf",
+    "size": 1295728,
+    "title": "Hello, world."
+  }
+]
